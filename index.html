@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bored</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            height: 100vh;
+            width: 100vw;
+            background-color: #775474;
+           text-align: center;
+            
+        }
+        h1{
+            margin-bottom: 40px;
+            position: relative;
+            top: 120px;
+
+        }
+        span{
+            margin: 40px;
+            background-color: pink;
+            padding: 10px;
+            border: 3px solid black;
+            border-radius: 10px;
+            position: relative;
+            top: 120px;
+        }
+        .catImage{
+            height: 200px;
+            position: relative;
+            top: 120px;
+
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+         <img class="catImage" src="catStare.png" alt="cat img">
+         <h1 id="ques">Kya Koring ? khali hi bethi hogi</h3>
+         <span id="yes">Ha</span>
+         <span id="no">Nahi</span>
+    </div>
+</body>
+<script>
+    const yesButton = document.querySelector('#yes');
+    const noButton = document.querySelector('#no');
+    const ques = document.querySelector('#ques');
+    const catImage = document.querySelector('.catImage');
+
+    yesButton.addEventListener('click',function(e){
+        catImage.setAttribute('src','catLaugh.gif')
+        ques.innerHTML = 'Pata Hi Tha '
+        noButton.setAttribute('style','display: none')
+        yesButton.innerHTML = 'Alsi kahinki'
+    })
+    noButton.addEventListener('mouseover',function(e){
+
+  noButton.style.left = `${Math.floor(Math.random() * 100)}px`;
+  noButton.style.top = `${Math.floor(Math.random() * 100)}px`;
+})
+
+</script>
+</html>
